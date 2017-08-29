@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block titulo %}Pagina Inicial{% endblock %}
+
+{% block conteudo %}
+	<img src = "{{ usuario['avatar_url']}}">
+	<h1>{{usuario['name']}}</h1>
+
+	{% for repo in repos %}
+		<p>{{repo['language']}} - {{repo['name']}}</p>
+	{% endfor %}
+{% endblock %}
